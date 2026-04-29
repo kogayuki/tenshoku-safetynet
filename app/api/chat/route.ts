@@ -53,7 +53,7 @@ ${SHARED_DISCLAIMER}
       model: MODEL,
       max_tokens: 1500,
       system: systemPrompt,
-      messages: messages.map((m: { role: string; content: string }) => ({
+      messages: messages.map((m: { role: "user" | "assistant"; content: string }) => ({
         role: m.role,
         content: m.content,
       })),
